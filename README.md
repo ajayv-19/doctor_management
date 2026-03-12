@@ -53,37 +53,7 @@ cd doctor_management
 npm install
 ```
 
-### 3. Environment variables
-
-Create a `.env` file in the project root (and add it to `.gitignore` if not already). You’ll need:
-
-**Firebase (required for login):**
-
-```env
-REACT_APP_FIREBASE_API_KEY=your_api_key
-REACT_APP_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
-REACT_APP_FIREBASE_PROJECT_ID=your_project_id
-REACT_APP_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
-REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
-REACT_APP_FIREBASE_APP_ID=your_app_id
-```
-
-**Backend API (for doctors, sliders, appointments):**
-
-```env
-BASE_URL=https://your-api.com/api
-API_KEY=your_bearer_token
-```
-
-**Optional (e.g. prescription OCR):**
-
-```env
-REACT_APP_GOOGLE_VISION_API_KEY=your_google_vision_key
-```
-
-Configure these in the [Firebase Console](https://console.firebase.google.com/) and your API server.
-
-### 4. Run the app
+### 3. Run the app
 
 ```bash
 npm start
@@ -146,7 +116,7 @@ The app expects a REST API that supports:
 - `POST /appointments` — Create appointment
 - `GET /appointments?populate=*` — User’s appointments
 
-Responses should follow a Strapi-like format with `data` and optional `populate` relations. Use the same `BASE_URL` and `API_KEY` (Bearer) in `.env`.
+Responses should follow a Strapi-like format with `data` and optional `populate` relations.
 
 ---
 
